@@ -40,6 +40,10 @@ data "tss_secret" "my_password" {
   field = "password"
 }
 
+data "tss_secret_name" "my_secret" {
+  path = "\\MyFolder\\MySecretName"
+}
+
 output "username" {
   value     = data.tss_secret.my_username.value
 }
